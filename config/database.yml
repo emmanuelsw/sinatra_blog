@@ -1,0 +1,19 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: sinatra_blog_development
+  pool: 2
+  username: emmanueldev
+  password: nazgul666
+  host: localhost
+  port: 5432
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: sinatra_blog_production
+  pool: 2
+  username: emmanueldev
+  password: nazgul666
+  host: localhost
+  port: 5432
