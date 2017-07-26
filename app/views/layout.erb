@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Sinatra Modular MVC Blog">
+    <meta name="author" content="EmmanuelSW">
+    <link rel="icon" type="image/png" href="<%= url('favicon.png') %>" />
+    <link rel="stylesheet" href="<%= url('styles/uikit.min.css') %>">
+    <link rel="stylesheet" href="<%= url('styles/main.css') %>">
+    <title>Sinatra Blog</title>
+  </head>
+  <body>
+    
+    <%= yield %>
+
+    <script src="<%= url('js/jquery.min.js') %>"></script>
+    <script src="<%= url('js/uikit.min.js') %>"></script>
+    <script src="<%= url('js/uikit-icons.min.js') %>"></script>
+  </body>
+</html>

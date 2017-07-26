@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+html, body {
+  background: #F6F9FC;
+}
+
+.main-navbar {
+  background: #fff;
+  border-bottom: 2px solid #bdc3c7;
+}
+
+.uk-logo {
+  padding-left: 0;
+}
+
+.uk-logo img {
+  width: 55px;
+}
