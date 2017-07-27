@@ -5,11 +5,12 @@
 }
 
 html, body {
-  background: #f1f7f9;
+  background: #ecf0f1;
 }
 
 .main-navbar {
-  background: #f1f7f9;
+  background: #ecf0f1;
+  padding-top: 22px;
 }
 
 .uk-logo {
@@ -17,7 +18,7 @@ html, body {
 }
 
 .uk-logo img {
-  width: 10em;
+  width: 8em;
 }
 
 .uk-inline {
@@ -25,7 +26,7 @@ html, body {
 }
 
 .uk-navbar-item {
-  height: 70px;
+  height: 30px;
 }
 
 .uk-alert-danger {
