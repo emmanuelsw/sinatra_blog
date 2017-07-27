@@ -1,6 +1,17 @@
 <%= erb :navbar %>
 <br>
 
+<% unless locals.empty? %>
+  <div class="uk-container">
+    <div class="uk-alert-danger" uk-alert>
+      <a class="uk-alert-close" uk-close></a>
+      <% errors.each do |error| %>
+        <li><%= error %></li>
+      <% end %>
+    </div>
+  </div>
+<% end %>
+
 <div class="uk-container uk-card uk-card-default uk-card-body">
   <h3 class="uk-card-title">Registrarse</h3>
 
@@ -11,7 +22,7 @@
       <div class="uk-form-controls">
         <div class="uk-inline">
           <span class="uk-form-icon" uk-icon="icon: user"></span>
-          <input name="name" class="uk-input" type="text">
+          <input name="name" class="uk-input" type="text" value="<%= @user.name %>">
         </div>
       </div>
     </div>
@@ -21,7 +32,7 @@
       <div class="uk-form-controls">
         <div class="uk-inline">
           <span class="uk-form-icon" uk-icon="icon: mail"></span>
-          <input name="email" class="uk-input" type="email">
+          <input name="email" class="uk-input" type="email" value="<%= @user.email %>">
         </div>
       </div>
     </div>
@@ -31,7 +42,7 @@
       <div class="uk-form-controls">
         <div class="uk-inline">
           <span class="uk-form-icon" uk-icon="icon: bolt"></span>
-          <input name="username" class="uk-input" type="text">
+          <input name="username" class="uk-input" type="text" value="<%= @user.username %>">
         </div>
       </div>
     </div>

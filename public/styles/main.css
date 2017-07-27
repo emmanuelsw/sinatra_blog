@@ -9,8 +9,7 @@ html, body {
 }
 
 .main-navbar {
-  background: #fff;
-  border-bottom: 2px solid #2C3E50;
+  background: #f1f7f9;
 }
 
 .uk-logo {
@@ -27,4 +26,23 @@ html, body {
 
 .uk-navbar-item {
   height: 70px;
+}
+
+.uk-alert-danger {
+  color: #fef4f6;
+  background: #f0506e;
+  margin-bottom: 15px !important;
+}
+
+.uk-card-body {
+  padding: 20px 20px;
+}
+
+.nabvar-btn {
+  font-size: .97rem;
+  font-weight: 500;
+}
+
+.no-rpadding {
+  padding-right: 0;
 }
