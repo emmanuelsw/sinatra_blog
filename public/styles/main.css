@@ -4,6 +4,12 @@
   border: 0;
 }
 
+@font-face {
+  font-family: "Proxima Nova";
+  src: url("../fonts/ProximaNova.woff") format('woff');
+  font-weight: bold;
+}
+
 html, body {
   background: #ecf0f1;
 }
@@ -46,4 +52,23 @@ html, body {
 
 .no-rpadding {
   padding-right: 0;
+}
+
+.uk-article-title {
+  font-size: 2rem;
+  margin-bottom: 0px;
+  color: #293A4B;
+  font-family: "Proxima Nova";
+}
+
+.uk-article-meta {
+  margin-top: 5px;
+}
+
+.article {
+  margin-bottom: 20px;
+}
+
+.article p {
+  font-family: "Proxima Nova";
 }
