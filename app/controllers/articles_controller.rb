@@ -1,7 +1,7 @@
 class ArticlesController < ApplicationController
 
   get '/articles' do
-    "Hola Articulos"
+    render_view :'articles/index'
   end
-  
+
 end

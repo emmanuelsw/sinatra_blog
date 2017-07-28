@@ -13,6 +13,21 @@
   </head>
   <body>
 
+    <%= erb :navbar %>
+    
+    <br>
+
+    <% unless locals.empty? %>
+      <div class="uk-container">
+        <div class="uk-alert-danger" uk-alert>
+          <a class="uk-alert-close" uk-close></a>
+          <% errors.each do |error| %>
+            <li><%= error %></li>
+          <% end %>
+        </div>
+      </div>
+    <% end %>
+
     <%= yield %>
 
     <script src="<%= url('js/jquery.min.js') %>"></script>

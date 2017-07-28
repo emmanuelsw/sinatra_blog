@@ -8,12 +8,19 @@
     </div>
 
     <div class="uk-navbar-right">
-      <div class="uk-navbar-item">
-          <a href="/login" class="uk-button uk-button-text nabvar-btn">Iniciar Sesión</a>
-      </div>
-      <div class="uk-navbar-item no-rpadding">
-          <a href="/register" class="uk-button uk-button-text nabvar-btn">Registrarse</a>
-      </div>
+      <% unless signed_in? %>
+        <div class="uk-navbar-item">
+            <a href="/login" class="uk-button uk-button-text nabvar-btn">Iniciar Sesión</a>
+        </div>
+        <div class="uk-navbar-item no-rpadding">
+            <a href="/register" class="uk-button uk-button-text nabvar-btn">Registrarse</a>
+        </div>
+      <% else %>
+        <div class="uk-navbar-item no-rpadding">
+            <a href="/logout" class="uk-button uk-button-text nabvar-btn">Cerrar Sesión</a>
+        </div>
+      <% end %>
+
     </div>
 
   </nav>
