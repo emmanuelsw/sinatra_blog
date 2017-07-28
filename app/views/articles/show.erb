@@ -1,0 +1,13 @@
+<div class="uk-container uk-card uk-card-default uk-card-body article">
+  <article class="uk-article">
+
+    <h2 class="uk-article-title uk-heading-divider">
+      <a class="uk-link-reset" href="/articles/<%= @article.id %>"><%= @article.title %></a>
+    </h2>
+
+    <p class="uk-article-meta">Escrito por <a href="#"><%= @article.user.name %></a> - <%= @article.created_date %></p>
+
+    <p class="uk-text-justify body"><%= @article.body %></p>
+
+  </article>
+</div>
