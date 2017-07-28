@@ -76,5 +76,17 @@ html, body {
 p.body {
   font-size: 18px;
   line-height: 1.8;
+}
 
+.uk-heading-line {
+  font-size: 2rem;
+  font-family: "Proxima Nova";
+}
+
+.uk-comment-header {
+  margin-bottom: 10px;
+}
+
+hr.uk-divider-icon {
+  margin-top: 16px;
 }
