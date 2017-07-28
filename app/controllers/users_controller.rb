@@ -12,7 +12,16 @@ class UsersController < ApplicationController
   end
 
   post '/login' do
-    "Bien hecho! #{params[:username]}, #{params[:password]} "
+    if params.values.any? { |val| val == '' }
+      erb :'users/login', locals: { errors: ['Debes ingresar todos los campos del formulario.'] }
+    end
+    user = User.find_by(username: params[:username])
+    if user && user.authenticate(params[:password])
+      session[:user_id] = user.id
+      redirect to 'articles'
+    else
+      erb :'users/login', locals: { errors: ['Usuario o contraseña incorrectos.'] }
+    end
   end
 
   post '/register' do
