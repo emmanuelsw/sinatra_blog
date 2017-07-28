@@ -1,0 +1,31 @@
+<div class="uk-container uk-card uk-card-default uk-card-body">
+  <h3 class="uk-card-title">Crear Articulo</h3>
+
+  <form class="uk-form-stacked" method="post" action="/articles">
+
+    <div class="uk-margin">
+      <label class="uk-form-label" for="form-stacked-text">Título</label>
+      <div class="uk-form-controls">
+        <div class="uk-inline">
+          <span class="uk-form-icon" uk-icon="icon: hashtag"></span>
+          <input name="title" class="uk-input" type="text" value="<%= @article.title %>">
+        </div>
+      </div>
+    </div>
+
+    <div class="uk-margin">
+      <label class="uk-form-label" for="form-stacked-text">Contenido</label>
+      <div class="uk-form-controls">
+        <div class="uk-inline">
+          <textarea name="body" class="uk-textarea" rows="10"><%= @article.body %></textarea>
+        </div>
+      </div>
+    </div>
+
+    <div class="uk-margin">
+      <button type="submit" class="uk-button uk-button-secondary">Crear</button>
+    </div>
+
+  </form>
+
+</div>

@@ -11,7 +11,15 @@ class ApplicationController < Sinatra::Base
     register Sinatra::Reloader
   end
 
+  not_found do
+    'Madre mia chaval no se ha encontrado la página.'
+  end
+
   helpers do
+
+    def redirect_unauthenticated
+      erb :'users/login', locals: {errors: ['Debes iniciar sesión para acceder a este recurso.']} unless signed_in?
+    end
 
     def redirect_authenticated
       redirect to '/articles' if signed_in?
@@ -28,6 +36,11 @@ class ApplicationController < Sinatra::Base
     def signed_in?
       !!session[:user_id]
     end
+
+    def current_user
+      User.find(session[:user_id])
+    end
+
   end
 
   get '/' do

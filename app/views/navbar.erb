@@ -2,23 +2,47 @@
   <nav class="uk-container" uk-navbar>
 
     <div class="uk-navbar-left">
-      <a class="uk-navbar-item uk-logo" href="#">
-        <img src="<%= url('images/logo.svg') %>" alt="logo">
-      </a>
+      <% if signed_in? %>
+        <a class="uk-navbar-item uk-logo" href="/articles">
+          <img src="<%= url('images/logo.svg') %>" alt="logo">
+        </a>
+      <% else %>
+        <a class="uk-navbar-item uk-logo" href="/">
+          <img src="<%= url('images/logo.svg') %>" alt="logo">
+        </a>
+      <% end %>
+
     </div>
 
     <div class="uk-navbar-right">
       <% unless signed_in? %>
-        <div class="uk-navbar-item">
-            <a href="/login" class="uk-button uk-button-text nabvar-btn">Iniciar Sesión</a>
-        </div>
-        <div class="uk-navbar-item no-rpadding">
-            <a href="/register" class="uk-button uk-button-text nabvar-btn">Registrarse</a>
-        </div>
+      <div class="uk-navbar-item">
+        <a href="/login" class="uk-button uk-button-text nabvar-btn">Iniciar Sesión</a>
+      </div>
+      <div class="uk-navbar-item no-rpadding">
+        <a href="/register" class="uk-button uk-button-text nabvar-btn">Registrarse</a>
+      </div>
       <% else %>
-        <div class="uk-navbar-item no-rpadding">
-            <a href="/logout" class="uk-button uk-button-text nabvar-btn">Cerrar Sesión</a>
+
+      <div class="uk-navbar-item">
+        <a class="uk-button uk-button-text nabvar-btn" href="/articles/new">
+          <span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" ratio="1"><rect x="9" y="2" width="1" height="13"></rect><rect x="2" y="8" width="15" height="1"></rect></svg>
+          </span>
+          Crear Articulo
+        </a>
+      </div>
+
+      <div class="uk-navbar-item no-rpadding">
+
+        <button class="uk-button uk-button-text nabvar-btn" type="button"><%= current_user.name %></button>
+        <div uk-dropdown="mode: click; pos: bottom-right">
+          <ul class="uk-nav uk-dropdown-nav">
+            <li><a href="#">Perfil</a></li>
+            <li><a href="/logout">Cerrar Sesión</a></li>
+          </ul>
         </div>
+      </div>
       <% end %>
 
     </div>
