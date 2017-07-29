@@ -18,7 +18,7 @@ class ApplicationController < Sinatra::Base
   helpers do
 
     def redirect_unauthenticated
-      erb :'users/login', locals: {errors: ['Debes iniciar sesión para acceder a este recurso.']} unless signed_in?
+      redirect to '/login' unless signed_in?
     end
 
     def redirect_authenticated
@@ -39,6 +39,10 @@ class ApplicationController < Sinatra::Base
 
     def current_user
       User.find(session[:user_id])
+    end
+
+    def h(text)
+      Rack::Utils.escape_html(text)
     end
 
   end

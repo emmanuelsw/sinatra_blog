@@ -73,6 +73,17 @@ html, body {
   font-family: "Proxima Nova";
 }
 
+.article div {
+  font-family: "Proxima Nova";
+}
+
+.article h1 {
+  font-family: "Proxima Nova";
+  font-size: 1.5rem;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
 p.body {
   font-size: 18px;
   line-height: 1.8;

@@ -8,13 +8,14 @@
     <meta name="author" content="EmmanuelSW">
     <link rel="icon" type="image/png" href="<%= url('favicon.png') %>" />
     <link rel="stylesheet" href="<%= url('styles/uikit.min.css') %>">
+    <link rel="stylesheet" href="<%= url('styles/trix.css') %>">
     <link rel="stylesheet" href="<%= url('styles/main.css') %>">
     <title>Sinatra Blog</title>
   </head>
   <body>
 
     <%= erb :navbar %>
-    
+
     <br>
 
     <% unless locals.empty? %>
@@ -33,5 +34,6 @@
     <script src="<%= url('js/jquery.min.js') %>"></script>
     <script src="<%= url('js/uikit.min.js') %>"></script>
     <script src="<%= url('js/uikit-icons.min.js') %>"></script>
+    <script src="<%= url('js/trix.js') %>"></script>
   </body>
 </html>

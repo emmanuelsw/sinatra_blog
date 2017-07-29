@@ -1,5 +1,5 @@
 <div class="uk-container uk-card uk-card-default uk-card-body">
-  <h3 class="uk-card-title">Crear Articulo</h3>
+  <h3 class="uk-card-title">Crear Artículo</h3>
 
   <form class="uk-form-stacked" method="post" action="/articles">
 
@@ -17,7 +17,8 @@
       <label class="uk-form-label" for="form-stacked-text">Contenido</label>
       <div class="uk-form-controls">
         <div class="uk-inline">
-          <textarea name="body" class="uk-textarea" rows="10"><%= @article.body %></textarea>
+          <input id="body" type="hidden" name="body" value='<%= @article.body %>'>
+          <trix-editor class="uk-textarea article" input="body"></trix-editor>
         </div>
       </div>
     </div>

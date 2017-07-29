@@ -1,7 +1,7 @@
 class ArticlesController < ApplicationController
 
   get '/articles' do
-    @articles = Article.all
+    @articles = Article.order(created_at: :desc)
     render_view :'articles/index'
   end
 
@@ -15,15 +15,14 @@ class ArticlesController < ApplicationController
     render_view :'articles/show'
   end
 
- post '/articles' do
-   redirect_unauthenticated
-   @article = Article.new(title: params[:title], body: params[:body], user_id: current_user.id)
-   if @article.save
-     redirect to "/articles/#{@article.id}"
-   else
-     erb :'articles/new', locals: {errors: @article.errors.full_messages}
-   end
- end
-
+  post '/articles' do
+    redirect_unauthenticated
+    @article = Article.new(title: params[:title], body: params[:body], user_id: current_user.id)
+    if @article.save
+      redirect to "/articles/#{@article.id}"
+    else
+      erb :'articles/new', locals: {errors: @article.errors.full_messages}
+    end
+  end
 
 end

@@ -7,6 +7,9 @@ es:
         name: Nombre
         username: Nombre de usuario
         password: Contraseña
+      article:
+        title: Título
+        body: Contenido
     errors:
       messages:
         record_invalid: "La validación falló: %{errors}"
