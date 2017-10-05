@@ -4,7 +4,7 @@ development:
   database: sinatra_blog_development
   pool: 2
   username: emmanueldev
-  password: nazgul666
+  password: 
   host: localhost
   port: 5432
 
@@ -14,6 +14,6 @@ production:
   database: sinatra_blog_production
   pool: 2
   username: emmanueldev
-  password: nazgul666
+  password: 
   host: localhost
   port: 5432
